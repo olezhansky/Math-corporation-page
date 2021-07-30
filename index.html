@@ -6,29 +6,59 @@
     <title>Репетиторський центр - Math Corporation</title>
     <link rel="icon" href="img/favicon.ico" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header section" id="main">
     <div class="header__top">
         <div class="container">
             <div class="header__top-inner">
                 <div class="header__logo">
-                    <a href="#">
-                        <img src="img/header/logo.png" alt="">
+                    <a class="header__logo-link" href="#">
+                        <img class="header__logo-img" src="img/header/logo.png" alt="">
                     </a>
                 </div>
                 <nav class="header__menu">
                     <button class="header__menu-btn-top"><i class="fas fa-long-arrow-alt-up"></i></button>
+                    <div class="header__menu-burger">
+                        <span class="header__menu-burger-line header__menu-burger-line--first"></span>
+                        <span class="header__menu-burger-line"></span>
+                        <span class="header__menu-burger-line"></span>
+                    </div>
                     <ul class="header__menu-list">
-                        <li class="header__menu-item"><a class="header__menu-link" href="#">Про нас</a></li>
-                        <li class="header__menu-item"><a class="header__menu-link" href="#">Галерея</a></li>
-                        <li class="header__menu-item"><a class="header__menu-link" href="#">Викладачі</a></li>
-                        <li class="header__menu-item"><a class="header__menu-link" href="#">lorem</a></li>
-                        <li class="header__menu-item"><a class="header__menu-link" href="#">lorem</a></li>
+                        <li class="header__menu-item"><a class="header__menu-link header__menu-link--active lng-menu" href="#main">Головна</a></li>
+                        <li class="header__menu-item"><a class="header__menu-link lng-menu2" href="#about">Про нас</a></li>
+                        <!-- <li class="header__menu-item"><a class="header__menu-link lng-menu2" href="#process">Процес</a></li> -->
+                        <li class="header__menu-item"><a class="header__menu-link lng-menu3" href="#services">Послуги</a></li>
+                        <li class="header__menu-item"><a class="header__menu-link lng-menu4" href="#team">Викладачі</a></li>
+                        <li class="header__menu-item"><a class="header__menu-link lng-menu5" href="#feedback">Відгуки</a></li>
+                        <li class="header__menu-item"><a class="header__menu-link lng-menu6" href="#contacts">Контакти</a></li>
+                        <li class="header__menu-item header__menu-list-drop"><a class="header__menu-link lng-menu7" href="#">Інформація</a>
+                            <ul class="header__menu-drop">
+                              <li class="header__menu-drop-item"><a class="header__menu-drop-link" href="https://zno.osvita.ua/" target="_blank">ЗНО</a></li>
+                              <li class="header__menu-drop-item"><a class="header__menu-drop-link" href="https://zakon.rada.gov.ua/laws" target="_blank">Lorem ipsum dolor sit amet</a></li>
+                              <li class="header__menu-drop-item"><a class="header__menu-drop-link" href="https://reyestr.court.gov.ua/" target="_blank">Lorem ipsum dolor sit amet</a></li>
+                              <li class="header__menu-drop-item"><a class="header__menu-drop-link" href="https://court.gov.ua/fair" target="_blank">Lorem ipsum dolor sit amet</a></li>
+                              <li class="header__menu-drop-item"><a class="header__menu-drop-link" href="https://kap.minjust.gov.ua/" target="_blank">Lorem ipsum dolor sit amet</a></li>
+                              <li class="header__menu-drop-item"><a class="header__menu-drop-link" href="http://www.mayno.lviv.ua/" target="_blank">Lorem ipsum dolor sit amet</a></li>
+                              <li class="header__menu-drop-item"><a class="header__menu-drop-link" href="https://city-adm.lviv.ua/services/" target="_blank">Lorem ipsum dolor sit amet</a></li>
+                              <li class="header__menu-drop-item"><a class="header__menu-drop-link" href="https://map.land.gov.ua/kadastrova-karta" target="_blank">Lorem ipsum dolor sit amet</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__select-wrapper">
+                            <div class="header__select">
+                              <button class="dropdown-btn">UA</button>
+                              <ul class="dropdown__list">
+                                <li data-value="ru" class="dropdown__list-item">RU</li>
+                                <li data-value="ua" class="dropdown__list-item">UA</li>
+                              </ul>
+                            </div>
+                          </li>
                     </ul>
                 </nav>
             </div>
@@ -37,53 +67,108 @@
     <div class="header__content">
         <div class="container">
             <div class="header__content-inner">
-                <h2 class="header__title">Хочеш вступити до університету мрії?</h2>
-                <h2 class="header__subtitle">Почни готуватись вже зараз</h2>
-                <h1 class="header__subtitle-subject">Математика <span>Фізика</span></h1>
-                <button class="header__button">Запис на безкоштовний урок</button>
+                <div class="header__content-slider">
+                    <div class="swiper-wrapper">
+                        <h2 class="header__subtitle-slide swiper-slide lng-slide">Хочеш вступити до університету мрії?</h2>
+                        <h2 class="header__subtitle-slide swiper-slide lng-slide2">Хочеш здати ЗНО на високий бал?</h2>
+                        <h2 class="header__subtitle-slide swiper-slide lng-slide3">Хочеш здати ДПА на високий бал?</h2>
+                    </div>
+                </div>
+                <h2 class="header__subtitle lng-headerSubtitle">Почни готуватись вже зараз</h2>
+                <h1 class="header__title lng-headerTitle">Математика Фізика</h1>
+                <button class="header__button lng-headerButton" data-fancybox data-src="#modal" href="javascript:;">Запис на безкоштовний урок</button>
             </div>
         </div>
     </div>
 </header>
-    <div class="about">
+    <div class="about section" id="about">
     <div class="container">
-        <div class="title">
+        <h2 class="title lng-aboutTitle">
             Про нас
-        </div>
+        </h2>
         <div class="about__content">
             <img class="about__img" src="img/about/about-us.png"></img>
             <div class="about__text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi perspiciatis eius accusamus quasi totam deserunt animi veritatis voluptates autem expedita quibusdam, rem laboriosam vitae distinctio quia tenetur ullam soluta, quidem consequatur non aut quaerat corrupti facere? Sed deleniti, voluptates odio incidunt beatae quae aperiam et, eum ex, obcaecati delectus dolor cupiditate similique. Similique hic earum sit, sequi numquam molestias, perferendis architecto in quam mollitia unde praesentium odio atque. Ex, nihil hic porro eos quibusdam esse harum. Ipsum optio expedita autem. 
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi perspiciatis eius accusamus quasi totam deserunt animi veritatis voluptates autem expedita quibusdam, rem laboriosam vitae distinctio quia tenetur ullam soluta, quidem consequatur non aut quaerat corrupti facere? Sed deleniti, voluptates odio incidunt beatae quae aperiam et, eum ex, obcaecati delectus dolor cupiditate similique. Similique hic earum sit, sequi numquam molestias, perferendis architecto in quam mollitia unde praesentium odio atque. Ex, nihil hic porro eos quibusdam esse harum. Ipsum optio expedita autemmm. 
             </div>
         </div>
     </div>
 </div>
-    <div class="process">
+    <div class="process" id="process">
     <div class="container">
-        <div class="title">
-            Як проходе навчання
-        </div>
+        <h2 class="title lng-processTitle">
+            Процес навчання
+        </h2>
         <div class="process__content">
             <div class="process__text">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi perspiciatis eius accusamus quasi totam deserunt animi veritatis voluptates autem expedita quibusdam, rem laboriosam vitae distinctio quia tenetur ullam soluta, quidem consequatur non aut quaerat corrupti facere? 
             </div>
-            <img class="process__img" src="img/process/process.png"></img>
+            <img class="process__img" src="img/process/process2.png"></img>
         </div>
     </div>
 </div>
-    
+    <section class="services section" id="services">
+    <div class="container">
+        <h2 class="services__title title lng-servicesTitle">
+            Наші послуги
+        </h2>
+        <div class="services__content">
+            <ul class="services__menu">
+                <li id="services__menu-item" class="services__menu-item services__menu-item--active lng-servicesAlgebra" data-tab="algebra">Алгебра</li>
+                <li id="services__menu-item" class="services__menu-item lng-servicesMenuItem lng-servicesGeometry" data-tab="geometry">Геометрия</li>
+                <li id="services__menu-item" class="services__menu-item lng-servicesMenuItem lng-servicesPhysics" data-tab="physics">Физика</li>
+                <li id="services__menu-item" class="services__menu-item lng-servicesMenuItem lng-servicesZno"  data-tab="zno">ВНО</li>
+                <li id="services__menu-item" class="services__menu-item lng-servicesMenuItem lng-servicesDpa" data-tab="dpa">ДПА</li>
+            </ul>
+            <ul class="services__menu-content">
+                <li class="services__menu-content-item" style="display: flex" data-tab="algebra">
+                    <img class="services__content-img" src="img/services/services-algebra.png" alt="">
+                    <p class="services__menu-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere commodi, dolor deserunt dolorem animi alias quidem deleniti inventore laboriosam ullam error facilis qui laborum quam tempora maxime nam. Ducimus voluptate odit itaque, ex commodi officiis, ipsa totam quia soluta, molestiae nihil eligendi vitae architecto eaque dolorem adipisci dolor in iste?
+                    </p>
+                </li>
+                <li class="services__menu-content-item" data-tab="geometry">
+                    <img class="services__content-img" src="img/services/services-geometry.png" alt="">
+                    <p class="services__menu-text">
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt delectus dolore perspiciatis tempore! Ducimus cum harum neque deserunt praesentium blanditiis laborum eius. Ipsa ullam magni perferendis, illo quas doloremque ex quae, atque tempore soluta quis! Nihil magni dolorum asperiores nemo est nostrum rerum eligendi eaque accusamus possimus! Dolor, provident quos.
+                    </p>
+                </li>
+                <li class="services__menu-content-item" data-tab="physics">
+                    <img class="services__content-img" src="img/services/services-physics.jpg" alt="">
+                    <p class="services__menu-text">
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nemo optio porro cum error! Magni quia autem, iusto, minima quod quae necessitatibus soluta, officiis excepturi porro a laboriosam officia at! Eaque numquam, quas temporibus libero aperiam repellat id blanditiis facere sequi ex officia expedita maxime necessitatibus et asperiores repellendus rem?
+                    </p>
+                </li>
+                <li class="services__menu-content-item" data-tab="zno">
+                    <img class="services__content-img" src="img/services/services-zno.jpg" alt="">
+                    <p class="services__menu-text">
+                        User interface (UI) design or user interface engineering is the design of user interfaces for machines and software, such as computers, home appliances, mobile devices, and other electronic devices, with the focus on maximizing usability and the user experience. The goal of user interface design is to make the user's interaction as simple and efficient as possible, in terms of accomplishing user goals (user-centered design).
+                    </p>
+                </li>
+                <li class="services__menu-content-item" data-tab="dpa">
+                    <img class="services__content-img" src="img/services/services-dpa.png" alt="">
+                    <p class="services__menu-text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis dolorum molestiae quae officiis consectetur porro accusantium quasi enim, minima eligendi. Recusandae est accusamus voluptatum itaque incidunt voluptatibus veniam adipisci porro at, quam cupiditate suscipit maiores, omnis illo a? Ipsam quaerat voluptatibus, ut maiores quos officia repellendus commodi minima deleniti aliquid.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+   
+   
     <section class="center">
     <div class="container">
-        <h3 class="center__text">
+        <h3 class="center__text lng-centerText">
             Пам'ятай, що ми - не курси,
             <br>
             ми - репетиторський центр Math Corporation
         </h3>
-            <button class="header__button">Запис на безкоштовний урок</button>
+            <button class="header__button lng-headerButton2" data-fancybox data-src="#modal" href="javascript:;">Запис на безкоштовний урок</button>
     </div>
 </section>
 
-    <section class="team">
+    <section class="team section" id="team">
     <div class="container">
         <h2 class="team__title title">Наша команда</h2>
         <p class="team__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nobis laborum commodi quae similique tenetur reiciendis autem dolor in numquam, maxime nisi provident totam. Qui sunt amet dolore et nam?</p>
@@ -151,36 +236,57 @@
                     </div>
                 </div>
             </div>
+            <div class="team__item">
+                <div class="team__item-title">
+                    Дарина
+                </div>
+                <img class="team__item-img" src="img/team/vitaliy.jpg" alt="">
+                <div class="team__item-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, temporibus.
+                </div>
+                <div class="team__social-network">
+                    <div class="team__social-network-instagram">
+                        <a href="#">
+                            <img src="img/team/instagram.png" alt="">
+                        </a>
+                    </div>
+                    <div class="team__social-network-facebook">
+                        <a href="#">
+                            <img src="img/team/facebook.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-    <section class="reviews">
+    <section class="reviews section" id="feedback">
     <div class="container">
-        <h2 class="reviews__title title">Відгуки про Math Corporation</h2>
+        <h2 class="reviews__title title">Відгуки</h2>
         <div class="reviews__quotes"></div>
         <div class="swiper-container gallery-top">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <p class="swiper-slide-text">User experience design (UXD, UED, or XD) is the process of supporting user behavior through usability, usefulness, and desirability provided in the interaction with a product</p>
+                <p class="swiper-slide-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae quam earum veritatis nisi numquam animi magnam sint. Mollitia dicta pariatur commodi corporis facere tempora architecto dolore reprehenderit voluptatibus illo deserunt, ex cupiditate dolor eum assumenda!</p>
                 <p class="swiper-slide-person">Hasan ALI</p>
                 <p class="swiper-slide-position">Учень</p>
                 <img src="img/reviews/about-slider-big1.png">
               </div>
               <div class="swiper-slide">
-                <p class="swiper-slide-text">A web developer is a programmer who specializes in, or is specifically engaged in, the development of World Wide Web applications using a client–server model.</p>
+                <p class="swiper-slide-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae quam earum veritatis nisi numquam animi magnam sint. Mollitia dicta pariatur commodi corporis facere tempora architecto dolore reprehenderit voluptatibus illo deserunt, ex cupiditate dolor eum assumenda!.</p>
                 <p class="swiper-slide-person">Olivia Smith</p>
                 <p class="swiper-slide-position">Учень</p>
                 <img src="img/reviews/about-slider-big2.png">
               </div>
               <div class="swiper-slide">
-                <p class="swiper-slide-text">User interface (UI) design or user interface engineering is the design of user interfaces for machines and software, such as computers, home appliances, mobile devices, and other electronic devices, with the focus on maximizing usability and the user experience.</p>
+                <p class="swiper-slide-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae quam earum veritatis nisi numquam animi magnam sint. Mollitia dicta pariatur commodi corporis facere tempora architecto dolore reprehenderit voluptatibus illo deserunt, ex cupiditate dolor eum assumenda!</p>
                 <p class="swiper-slide-person">Amelia Brown</p>
                 <p class="swiper-slide-position">Учень</p>
                 <img src="img/reviews/about-slider-big3.png">
               </div>
               <div class="swiper-slide">
-                <p class="swiper-slide-text">UI design and UX design are two of the most often confused and conflated terms in web and app design. And understandably so. They’re usually placed together in a single term, UI/UX design, and viewed from the surface they seem to be describing the same thing. </p>
-                <p class="swiper-slide-person">Lily Kind</p>
+                <p class="swiper-slide-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae quam earum veritatis nisi numquam animi magnam sint. Mollitia dicta pariatur commodi corporis facere tempora architecto dolore reprehenderit voluptatibus illo deserunt, ex cupiditate dolor eum assumenda!</p>
+                <p class="swiper-slide-person">Amelia Brown</p>
                 <p class="swiper-slide-position">Учень</p>
                 <img src="img/reviews/about-slider-big4.png">
               </div>
@@ -214,7 +320,7 @@
         </div>
     </div>
 </section>
-    <section class="schedule">
+    <section class="schedule" id="schedule">
     <div class="container">
         <div class="schedule__title title">Графік занять</div>
         <table class="schedule__table">
@@ -261,53 +367,25 @@
         </table>
     </div>
 </section>
-    <section class="services">
-    <div class="container">
-        <h2 class="services__title title">
-            Our Services
-        </h2>
-        <div class="services__content">
-            <ul class="services__menu">
-                <li class="services__menu-item services__menu-item--active" data-tab="web-design">Алгебра</li>
-                <li class="services__menu-item" data-tab="graphic-design">Геометрія</li>
-                <li class="services__menu-item" data-tab="online-support">Фізика</li>
-                <li class="services__menu-item" data-tab="app-design">ЗНО</li>
-            </ul>
-            <ul class="services__menu-content">
-                <li class="services__menu-content-item" style="display: flex" data-tab="web-design">
-                    <img class="services__content-img" src="img/services/services-algebra.png" alt="">
-                    <p class="services__menu-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere commodi, dolor deserunt dolorem animi alias quidem deleniti inventore laboriosam ullam error facilis qui laborum quam tempora maxime nam. Ducimus voluptate odit itaque, ex commodi officiis, ipsa totam quia soluta, molestiae nihil eligendi vitae architecto eaque dolorem adipisci dolor in iste?
-                    </p>
-                </li>
-                <li class="services__menu-content-item" data-tab="graphic-design">
-                    <img class="services__content-img" src="img/services/services-geometry.png" alt="">
-                    <p class="services__menu-text">
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt delectus dolore perspiciatis tempore! Ducimus cum harum neque deserunt praesentium blanditiis laborum eius. Ipsa ullam magni perferendis, illo quas doloremque ex quae, atque tempore soluta quis! Nihil magni dolorum asperiores nemo est nostrum rerum eligendi eaque accusamus possimus! Dolor, provident quos.
-                    </p>
-                </li>
-                <li class="services__menu-content-item" data-tab="online-support">
-                    <img class="services__content-img" src="img/services/services-physics.jpg" alt="">
-                    <p class="services__menu-text">
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nemo optio porro cum error! Magni quia autem, iusto, minima quod quae necessitatibus soluta, officiis excepturi porro a laboriosam officia at! Eaque numquam, quas temporibus libero aperiam repellat id blanditiis facere sequi ex officia expedita maxime necessitatibus et asperiores repellendus rem?
-                    </p>
-                </li>
-                <li class="services__menu-content-item" data-tab="app-design">
-                    <img class="services__content-img" src="img/services/services-zno.jpg" alt="">
-                    <p class="services__menu-text">
-                        User interface (UI) design or user interface engineering is the design of user interfaces for machines and software, such as computers, home appliances, mobile devices, and other electronic devices, with the focus on maximizing usability and the user experience. The goal of user interface design is to make the user's interaction as simple and efficient as possible, in terms of accomplishing user goals (user-centered design).
-                    </p>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-    <section class="contacts">
+   
+    <section class="contacts section" id="contacts">
     <div class="container">
         <div class="contacts__title title">
             Контакти
         </div>
         <div class="contacts__content">
+            <div class="contacts__form">
+                <form>
+                    <h4 class="contacts__form-title">Залишились запитання?</h4>
+                    <p class="contacts__form-text">Ми обов'язково зателефонуємо Вам протягом двох днів</p>
+                    <div class="contacts__form-line">
+                    <input class="contacts__form-input" placeholder="Ваше ім'я" type="text">
+                    <input class="contacts__form-input" placeholder="Ваш телефон" type="phone">
+                    </div>
+                    <textarea class="contacts__form-textarea" placeholder="Що Вас цікавить?"></textarea>
+                    <button class="contacts__form-btn" type="submit">Відправити</button>
+                </form>
+            </div>
             <div class="contacts__info">
                 <div class="contacts__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, perspiciatis dignissimos! Autem neque tenetur numquam.
@@ -350,73 +428,47 @@
                         </li>
                      </ul>
                 </div>
-                
-            </div>
-            <div class="contacts__map">
-                <iframe class="contacts__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.0630237066857!2d30.47930211573172!3d50.45855107947653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce7c15a0f56d%3A0xcdb771c844ea8d6c!2sKopernyka%20St%2C%2017%2C%20Kyiv%2C%2002000!5e0!3m2!1sen!2sua!4v1614802277730!5m2!1sen!2sua" width="750" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </div>
 </section>
-    <section class="form" id="form">
-    <div class="container">
-      <div class="form__inner">
-        <div class="form__content">
-          <div class="form__title-box">
-            <div class="form__title title">
-              Записатись на пробне заняття
-            </div>
-            <div class="form__text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum perferendis quia. A quam facere necessitatibus quae recusandae, totam cupiditate.
-            </div>
-          </div>
-          <div class="form__box">
-            <div class="form__box-inner">
-              <div class="form__box-left">
-                <form action="">
-                  <!-- Hidden Required Fields -->
-                  <input type="hidden" name="project_name" value="Lecred">
-                  <input type="hidden" name="admin_email" value="lecred.ua@gmail.com">
-                  <input type="hidden" name="form_subject" value="application">
-                  <!-- END Hidden Required Fields -->
-
-                  <label class="form__box-left-label">
-                    <input class="form__box-left-input" name="E-mail" type="text" placeholder="E-mail">
-                  </label>
-                  <label class="form__box-left-label">
-                    <input class="form__box-left-input" name="Телефон" type="text" placeholder="Ваше ім'я">
-                  </label>
-                  <label class="form__box-left-label">
-                    <input class="form__box-left-input" name="ФИО" type="text" placeholder="Контактний телефон">
-                  </label>
-                  <label class="form__box-left-label">
-                  
-                    <textarea class="form__box-left-textarea" name="Сообщение" type="text" placeholder="Повідомлення"></textarea>
-                  </label>
-                  <div class="form__btn">
-                    <button>Залишити заявку</button>
-                  </div>
-                </form>
-              </div>
-              <div class="form__box-right">
-                <img class="form__box-img" src="img/form-img.png" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-    <footer class="footer">
+    <div>
+    <iframe class="contacts__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.0630237066857!2d30.47930211573172!3d50.45855107947653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce7c15a0f56d%3A0xcdb771c844ea8d6c!2sKopernyka%20St%2C%2017%2C%20Kyiv%2C%2002000!5e0!3m2!1sen!2sua!4v1614802277730!5m2!1sen!2sua" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+    <footer class="footer section">
     <div class="container">
         <p class="footer__copy">© Math Corporation 2021. Всі права захищені</p>
     </div>
 </footer>
+    <div id="modal">
+    <form action="">
+
+      <!-- Hidden Required Fields -->
+      <input type="hidden" name="project_name" value="Lecred">
+      <input type="hidden" name="admin_email" value="lecred.ua@gmail.com">
+      <input type="hidden" name="form_subject" value="application">
+      <!-- END Hidden Required Fields -->
+
+      
+      <label>
+        <input name="Name" type="text" placeholder="Ваше ім'я">
+      </label>
+      <label>
+        <input name="E-mail" type="text" placeholder="Ваш телефон">
+        </label>
+      <label>
+        <input name="Description" type="text" placeholder="Що Вас цікавить?">
+      </label>
+      <input type="submit" value="Отправить">
+    </form>
+</div>
+
 
 
    
-   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/script.min.js"></script>
 </body>
 </html>
